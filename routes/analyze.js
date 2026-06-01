@@ -62,8 +62,31 @@ router.get("/", async (req, res) => {
     const metadata =
       await getVideoMetadata(videoId);
 
-    const transcript =
-      await getTranscript(videoId);
+    let transcript = [];
+
+try {
+
+  transcript =
+    await getTranscript(
+      videoId
+    );
+
+} catch (error) {
+
+  console.log(
+    "Transcript blocked"
+  );
+
+  transcript = [
+    {
+      text:
+        metadata.title +
+        " " +
+        metadata.hashtags.join(" ")
+    }
+  ];
+
+}
 
     const firstHook =
   transcript
