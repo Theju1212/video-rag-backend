@@ -63,7 +63,17 @@ console.log(
   info?.basic_info?.title
 );
 
+console.log(
+  "FULL BASIC INFO:"
+);
 
+console.log(
+  JSON.stringify(
+    info.basic_info,
+    null,
+    2
+  )
+);
 return {
 
   title:

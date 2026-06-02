@@ -63,6 +63,8 @@ router.get("/", async (req, res) => {
     const metadata =
       await getVideoMetadata(videoId);
       console.log("METADATA:", metadata);
+
+      
     
  console.log("METADATA:", metadata);
 
