@@ -57,6 +57,11 @@ async function getVideoMetadata(videoId) {
     const info =
       await youtube.getInfo(videoId);
 
+    console.log("VIDEO ID:", videoId);
+console.log(
+  "TITLE:",
+  info?.basic_info?.title
+);
 
 
 return {

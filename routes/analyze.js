@@ -30,9 +30,10 @@ const pineconeIndex =
   "../services/embeddingService"
 );
 
-
+console.log("ANALYZE ROUTE HIT");
 
 router.get("/", async (req, res) => {
+    console.log("YOUTUBE ROUTE HIT");
   try {
 
     const youtubeUrl =
@@ -61,6 +62,9 @@ router.get("/", async (req, res) => {
    
     const metadata =
       await getVideoMetadata(videoId);
+      console.log("METADATA:", metadata);
+    
+ console.log("METADATA:", metadata);
 
     let transcript = [];
 
